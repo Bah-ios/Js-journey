@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build gms",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\cpp\\main.cpp",
+                "${workspaceFolder}\\cpp\\Booking.cpp",
+                "${workspaceFolder}\\cpp\\Guest.cpp",
+                "${workspaceFolder}\\cpp\\Room.cpp",
+                "-o",
+                "${workspaceFolder}\\cpp\\gms.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run gms",
+            "type": "shell",
+            "command": "${workspaceFolder}\\cpp\\gms.exe",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "dependsOn": "Build gms"
+        },
+        {
+            "label": "Build new.cpp",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}\\new.cpp",
+                "-o",
+                "${workspaceFolder}\\new.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": ["$gcc"],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run new",
+            "type": "shell",
+            "command": "${workspaceFolder}\\new.exe",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "dependsOn": "Build new.cpp"
+        }
+    ]
+}
