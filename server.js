@@ -116,3 +116,101 @@ let max = compare(1, 4);
 console.log(max);
 
 ``` End of Conditionals       ```
+
+
+
+function is_landscape (width, height){
+    // if (width > height )
+    //     return  true;
+    // else return false;
+
+    return (width > height) ? true : false 
+    
+
+}
+
+console.log(is_landscape(40,344))
+
+
+function Fizzbuzz(input){
+
+    if (typeof(input)!== 'number') {
+        console.log("not a number")
+    }
+    else if (input % 3 === 0 && input % 5 === 0 )
+        console.log("FIzz Buzz")
+    else if(input % 3 === 0 )
+        console.log("Fizz")
+    else if(input % 5 === 0 )
+        console.log("Buzz")
+    else 
+        console.log(input)
+
+}
+
+Fizzbuzz(150)
+
+
+
+function checkSpeed(speed){ 
+    const speedLimit = 70;
+    
+    
+    if ( speed < speedLimit + 5){
+        console.log("Ok")
+        
+    }
+    else{
+        const point = Math.floor((speed - speedLimit)/5);
+        if (point > 12)
+            console.log('Licence suspended');
+        else 
+            console.log(`point is ${point}`);
+    }
+}
+
+checkSpeed(131)
+
+function ListNumbers(){
+    for( let i=0; i <= 10; i++)
+        if (i %2 === 0)
+            console.log(i , "Even")
+        else console.log(i , "odd")
+}
+ListNumbers()
+
+
+function sum(limit){
+    let sum = 0;
+    for (let i=0; i <=limit; i++){
+        
+        if (i % 3 === 0 || i % 5 === 0)
+            sum +=i;
+    }
+    console.log(sum);
+}
+sum(10);
+
+const abebe = [ 89, 88, 99, 78, 89, 90]
+
+function gradeCalculator (Marks){
+    let sum = 0;
+    
+    for(let grade of Marks){
+        sum += grade;
+    }
+    let avg = sum / Marks.length;
+    console.log(avg)
+}
+gradeCalculator(abebe)
+
+function StarGenerator (limit){
+    let pattern = '';
+    
+        for(let i=0; i<limit; i++){
+            pattern += '*';
+            console.log(pattern)    
+        }
+}
+StarGenerator(5)
+
