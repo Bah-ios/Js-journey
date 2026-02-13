@@ -131,6 +131,7 @@ function is_landscape (width, height){
 
 console.log(is_landscape(40,344))
 
+//////////////
 
 function Fizzbuzz(input){
 
@@ -147,10 +148,9 @@ function Fizzbuzz(input){
         console.log(input)
 
 }
-
 Fizzbuzz(150)
 
-
+//////////////
 
 function checkSpeed(speed){ 
     const speedLimit = 70;
@@ -171,6 +171,8 @@ function checkSpeed(speed){
 
 checkSpeed(131)
 
+//////////////////
+
 function ListNumbers(){
     for( let i=0; i <= 10; i++)
         if (i %2 === 0)
@@ -179,6 +181,7 @@ function ListNumbers(){
 }
 ListNumbers()
 
+//////////////////
 
 function sum(limit){
     let sum = 0;
@@ -190,6 +193,9 @@ function sum(limit){
     console.log(sum);
 }
 sum(10);
+
+/////////////////
+
 
 const abebe = [ 89, 88, 99, 78, 89, 90]
 
@@ -204,6 +210,9 @@ function gradeCalculator (Marks){
 }
 gradeCalculator(abebe)
 
+///////////////////
+
+
 function StarGenerator (limit){
     let pattern = '';
     
@@ -213,4 +222,3 @@ function StarGenerator (limit){
         }
 }
 StarGenerator(5)
-
