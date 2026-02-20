@@ -42,11 +42,18 @@ const section2 = ["mahlet","beti","mita"]
 // console.log(combined)
 
 const comb = [...section1, ...section2]
-console.log(comb)
+// console.log(comb)
 
 
-/////iterating through array
-comb.forEach(function(students){
-    console.log(students)
+// /////iterating through array
+// comb.forEach(function(students){
+//     console.log(students)
+// })
+
+const finder = comb.find(function(student){
+   return student === "beti"
+        
 })
+
+console.log(finder)
 
