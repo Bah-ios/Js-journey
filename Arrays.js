@@ -80,7 +80,7 @@ const cars = [
 
 cars.sort(function(a,b){
     const LetterofA = a.name.toUpperCase();
-    const LetterofB = b.name.toUpperCase();
+    const LetterofB = b.name.toUpperCase();               //sorting reference type elements of an array
 
     
     if (LetterofA < LetterofB ) return -1;
@@ -91,15 +91,61 @@ console.log(cars)
 
 
 
+const together = section1.concat(section2);
+
+const studentname = "alem";
+
+const finder = together.find((student)=>{
+   return student === studentname;                 //element search in array 
+})
+ 
+if (finder === studentname ){
+    console.log(true);
+}
+else console.log(false);
+console.log(together.includes(studentname));
 
 
 
+const numbers = [ 1,3,6,2,8,-1,4,5,7,9]
+const checked = numbers.every(function(numberr){
+     return numberr >= 0
+    })
 
-// const finder = comb.find(function(student){
-//    return student === "beti"
-        
-// })
+const atLeastOne = numbers.some((number)=> number < 0)
 
+console.log(atLeastOne);
+console.log(numbers);
+const sorted = numbers.sort();
+console.log(sorted);
+const filtered = numbers.filter(function(number){
+    return number >4;
+})
+console.log(filtered);
 
-// console.log(finder)
+const mapping = filtered.map(function(values){
+   return "<li>" + values + "</li>"
+})
+mapping.join()
+console.log(mapping)
+
+const Mapping_on_obj = filtered.map(function(elements){
+
+    const obj = { value : elements}
+    console.log(obj)
+
+})
+const array = [];          
+function rangeGenerator(min,max){
+    range = max - min;
+    
+    for (let i = 0; i<= range; i++ ){
+        array.push(min)
+        min++;
+    }
+    return array;                            
+    
+}
+const printer = rangeGenerator(-1,3)
+console.log(printer);
 
