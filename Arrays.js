@@ -172,17 +172,36 @@
 // const including = includess(array,9)
 // console.log(including)
 
-const numbers = [1, 4, 5, 6, 7, 9, 4,1,2,4]
-let exclude = [1,4]
-function execpt (array, exclude){
-    const excluded = []
-    for(let value of array){
-        if(exclude.includes(value))
-            excluded.push(value);
+// const numbers = [1, 4, 5, 6, 7, 9, 4,1,2,4]
+// let exclude = [1,4]
+// function execpt (array, exclude){
+//     const excluded = []
+//     for(let value of array){
+//         if(exclude.includes(value))
+//             excluded.push(value);
     
-}
-    return excluded;
-}
-const output = execpt(numbers, exclude)
+// }
+//     return excluded;
+// }
+// const output = execpt(numbers, exclude)
 
-console.log(output)
+// console.log(output)
+
+// 
+const list = [2, 3, 4, 8, 9]
+
+function positonSwap (array, index, offset){
+    const  newArray = [...array]
+    const position = index + offset;
+    if (position >= newArray.length || position < 0)
+        {
+        console.error("Invalid Position")
+        return;
+    }   
+    const SwappedNum = newArray.splice(index, 1)[0]
+    newArray.splice(position, 0, SwappedNum)
+    return newArray
+
+ }
+ const Swapped = positonSwap(list, 2, 3)
+ console.log(Swapped)
