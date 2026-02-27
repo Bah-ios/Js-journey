@@ -188,20 +188,34 @@
 // console.log(output)
 
 // 
-const list = [2, 3, 4, 8, 9]
+const list = [2, 3,2,2, 4, 8, 9]
 
-function positonSwap (array, index, offset){
-    const  newArray = [...array]
-    const position = index + offset;
-    if (position >= newArray.length || position < 0)
-        {
-        console.error("Invalid Position")
-        return;
-    }   
-    const SwappedNum = newArray.splice(index, 1)[0]
-    newArray.splice(position, 0, SwappedNum)
-    return newArray
+// function positonSwap (array, index, offset){
+//     const  newArray = [...array]
+//     const position = index + offset;
+//     if (position >= newArray.length || position < 0)
+//         {
+//         console.error("Invalid Position")
+//         return;
+//     }   
+//     const SwappedNum = newArray.splice(index, 1)[0]
+//     newArray.splice(position, 0, SwappedNum)
+//     return newArray
 
- }
- const Swapped = positonSwap(list, 2, 3)
- console.log(Swapped)
+//  }
+//  const Swapped = positonSwap(list, 2, 3)
+//  console.log(Swapped)
+
+function countOccurances (array, searchElement)
+{
+    let count = 0;
+    
+        for (let i =0; i < array.length; i++ )
+            if(array[i]=== searchElement){
+                count += 1;
+            }      
+    return count
+}
+
+const counter = countOccurances(list, 2 )
+console.log(counter)
