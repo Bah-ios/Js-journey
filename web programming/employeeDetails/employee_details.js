@@ -24,3 +24,14 @@ function displayHREmployees(depOfEmployee) {
         .join('');
      document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
+function findEmployeeById(employeeID){
+    const employee = employees.find(emp => emp.id === employeeID);
+    
+    if (employee){
+        document.getElementById('employeeDetails').innerHTML =
+            `<p>${employee.id} - ${employee.name} - ${employee.department}</p>`;
+    } else {
+        document.getElementById('employeeDetails').innerHTML =
+            "Employee not Found";
+    }
+}
