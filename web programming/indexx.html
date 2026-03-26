@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <script>
-    function printer (){
-        let text = document.getElementById("Input")
-        if (text === null)
-            alert("PLease Enter text to display")
-        else alert(text)
+    // function printer (){
+    //     let text = document.getElementById("Input")
+    //     if (text === null)
+    //         alert("PLease Enter text to display")
+    //     else alert(text)
+    // }
+    function insertParagraph(){
+        var newPara = document.createElement("p")
+        var content = document.createTextNode(" Thid id the text that is added with JS API with DOM ")
+
+        newPara.appendChild(content);
+        document.body.appendChild(newPara)
     }
+    
 </script>
     <html>
 
-        <body>
-            <input type ="text" id="Input"/>
-            <input type = "button" onclick="printer()" value='submit'/>
+        <body onvolumechange="insertParagraph()">
+            <!-- <input type ="text" id="Input"/>
+            <input type = "button" onclick="printer()" value='submit'/> -->
+            
         </body>
     </html>
 
