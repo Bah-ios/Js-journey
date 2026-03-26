@@ -8,7 +8,12 @@ function displayEmployees(){
     const totalEmployees = employees
     .map(function(employee){
         return `<p>${employee.id}:${employee.name}- ${employee.department} - ${employee.salary}</p>`
-    .join('');
     })
+    .join('');
     document.getElementById('employeesDetails').innerHTML = totalEmployees;
+}
+function calculateTotalSalaries(){
+    const totalsalaries = employees
+    .reduce((totalsalary,employee) =>  totalsalary + employee.salary, 0)
+    alert(`The total salary is : ${totalsalaries}`);
 }
