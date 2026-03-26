@@ -17,3 +17,10 @@ function calculateTotalSalaries(){
     .reduce((totalsalary,employee) =>  totalsalary + employee.salary, 0)
     alert(`The total salary is : ${totalsalaries}`);
 }
+function displayHREmployees(depOfEmployee) {
+     const hrEmployees = employees.filter(employee => employee.department === depOfEmployee);
+     const hrEmployeesDisplay = hrEmployees
+        .map((employee, index) => `<p>${employee.id}: ${employee.name} - ${employee.department} - ${employee.salary}</p>`)
+        .join('');
+     document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
+}
