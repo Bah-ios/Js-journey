@@ -83,8 +83,13 @@
  
         
     }
- 
+      function editTask(textContainer) {
+    var newTask = prompt("Edit your task:", textContainer.textContent);
 
+    if (newTask !== null && newTask.trim() !== "") {
+        textContainer.textContent = newTask;
+    }
+}
     // Placeholder for functionality to be added in future exercises
 </script>
 
