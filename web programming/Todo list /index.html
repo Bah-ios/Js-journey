@@ -61,7 +61,7 @@
 
         }
         var listElement = document.createElement("li");
-        var textContainer = document.createElement("textContainer");
+        var textContainer = document.createElement("span");
         var theList = document.getElementById("todoList")
 
         var editButton = document.createElement("button")
@@ -75,21 +75,29 @@
         listElement.appendChild(textContainer);
         listElement.appendChild(editButton);
         listElement.appendChild(deleteButton);
+        
 
         theList.appendChild(listElement);
         textEntered.value = ""
 
         editButton.onclick = () => editTask(textContainer);
+        deleteButton.onclick = () => deleteTask(listElement);
  
         
     }
-      function editTask(textContainer) {
-    var newTask = prompt("Edit your task:", textContainer.textContent);
-
-    if (newTask !== null && newTask.trim() !== "") {
-        textContainer.textContent = newTask;
+    function editTask(textContainer){
+        var editedInput = prompt("Edit the name of the task", textContainer.textContent)
+        if(editedInput !== null && editedInput.trim()  !== "" ){
+            textContainer.textContent = editedInput.trim();
+        }
     }
-}
+    function deleteTask(listElement){
+        var todelete = document.getElementById("todoList")
+        todelete.removeChild(listElement);
+
+    }
+   
+
     // Placeholder for functionality to be added in future exercises
 </script>
 
