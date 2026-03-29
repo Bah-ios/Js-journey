@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bahran - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Bahran Solomon
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          jdoe@jeemail.com
+          </div>
+          <div style="clear:both;"></div>
+          
+          <div class="contact_info">
+          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +13456764598
+
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#skills"> Skills</a>
+          <a class="topmenu" href="#projects" >Projects</a>
+          <a class="topmenu" href="#recommendations">Recommendation</a>
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+
+        </div>
+        
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejNzZnBuOHBwMGswNXhjaGV2Y2dkeHZtbmNudGtlcnBnMTBwN3M4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p4NLw3I4U0idi/giphy.gif" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Bahran Solomon! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+          </h1>
+          <p>
+            I am a full-stack developer with two years of expertise in 
+            building resilient cloud-native applications, focusing on the 
+            secure configuration of IBM Cloud environments and the use of 
+            Watson Sentiment Analyzer to identify and mitigate malicious communication patterns.
+            </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>2 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/java.png"/>
+          <h6>Java</h6>
+          <p>1 years experience</p>
+        </div> 
+
+        <div class="skill">
+          <img src="html_finalprojimages/node.png"/>
+          <h6>Node.js</h6>
+          <p>3 years experience</p>
+        </div> 
+
+        <div class="skill">
+          <img src="html_finalprojimages/CSS3.png"/>
+          <h6>CSS</h6>
+          <p>3 years experience</p>
+        </div> 
+
+        <!-- Add more skills here -->
+
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>AI-Driven Phishing Mitigation Gateway</h3>
+            <ul>
+              <li>DI built a security middleware on IBM Cloud using Watson NLU to detect real-time social engineering patterns. The system flags malicious intent in communications before they can impact the presentation layer.
+              </li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+        
+            <h3>Zero-Trust Microservices Architecture</h3>
+            <ul>
+              <li>I engineered a secure multi-tenant environment using IBM Cloud IAM and JWT for robust service-to-service authentication. This architecture ensures strict data isolation and prevents lateral movement across backend microservices.
+              </li>
+            </ul>
+          </div>
+
+            <hr>
+          <div class="project-card">
+            <h3>Automated Vulnerability Intelligence Tracker</h3>
+            <ul>
+              <li>I developed a monitoring tool using Watson Sentiment Analyzer to prioritize security patches based on developer community data. The system analyzes CVE discussions to rank exploit urgency and streamline cloud-native patching cycles.
+          </li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          An excellent developer who consistently delivers high quality work. Reliable, detail oriented, and always willing to learn and improve skills.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Great to work with, communicates clearly and meets deadlines. Demonstrates strong problem solving skills and creates clean, efficient, maintainable code.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+         A dedicated and creative developer who brings ideas to life. Shows professionalism, adaptability, and a strong commitment to continuous growth.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3><!-- Add appropriate text here--></h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
