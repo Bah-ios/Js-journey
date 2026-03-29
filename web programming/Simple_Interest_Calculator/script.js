@@ -19,7 +19,7 @@ function compute()
         var output = `
         If you deposit $${principal},
         at an interest rate of ${rate}%. 
-        You will receive an amount of $${interest},
+        You will receive an amount of $${amount},
         in the year ${year}
             `
         result.innerText = output;
