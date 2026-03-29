@@ -1,0 +1,20 @@
+body {
+    background-color:rgb(0, 0, 0);
+    color:white;
+
+}
+h1{
+    color:gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#maindiv{
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    width: 300px;
+    margin: 60px;
+    padding: 20px;
+    text-align: center;
+}
+
+
