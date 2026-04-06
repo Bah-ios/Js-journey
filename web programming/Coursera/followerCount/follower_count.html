@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Counter</title>
+  <style>
+    body {
+      background-color: black;
+      color: aliceblue;
+    }
+    img{
+      width: 100px;
+      border-radius: 20px;
+      padding-left: 50px;
+      padding-right: 50px;
+      
+    }
+  </style>
+</head>
+<body>
+  <img src = "./instagram.png" style="background-color: rgba(223, 158, 132, 0.938);">
+  <h1>Interactive Counter</h1>
+  <h2>Account Holder Name: Peter Parker</h2>
+  <p>Followers: <span id="countDisplay">0</span></p>
+  <hr>
+  <h2>Click one button to follow</h2>
+  <button onclick="increaseCount()">Follow</button>
+  <script src="./followers_count.js"></script>
+</body>
+</html>

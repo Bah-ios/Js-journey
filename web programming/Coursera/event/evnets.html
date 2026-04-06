@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Handler
+        </title>
+
+    </head>
+    <body>
+
+        <input type="text" id="myInput">
+        <p id="output">0</p>
+        <div id="mydiv"> Hover over me </div>
+        
+        <script>
+            const input = document.getElementById('myInput');
+            const output = document.getElementById('output');
+            input.onchange = function(){
+                output.textContent = `Value Changed to: ${input.value}`;
+
+            }
+            const div = document.getElementById('mydiv');
+            const out = document.getElementById('out');
+            div.onhov = function(){
+                 div.innerText= "mouse hovered over the div";
+            }
+        
+            
+        </script>
+    </body>    
+</html>
