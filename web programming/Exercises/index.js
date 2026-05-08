@@ -50,3 +50,4 @@ console.log(reversed);
 
 const sum = reversed.reduce((acc,cur) => acc+=cur)
 console.log(sum);
+
